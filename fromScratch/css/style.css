@@ -1,0 +1,272 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Inter:300,regular,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=EB+Garamond:regular,500&display=swap");
+/* ---ОБНУЛЕНИЕ------- */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+}
+
+a, button {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #131313;
+  font-weight: 300;
+  color: #fff;
+}
+
+/* ---ОБНУЛЕНИЕ END------- */
+.fancy-title {
+  white-space: nowrap;
+  font-family: "EB Garamond", sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 115%;
+  max-width: 290px;
+  margin: 0 auto;
+}
+.fancy-title .fancy-title-right {
+  padding-left: 30px;
+}
+.fancy-title .fancy-title-left {
+  padding-right: 30px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+}
+
+.header {
+  padding: 24px 0;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px 30px;
+}
+.header .header-nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.header .header-nav__link {
+  transition: all 0.3s ease 0s;
+}
+.header .header-nav__link:hover {
+  text-decoration: underline;
+}
+
+[class*=__container] {
+  padding: 0 15px;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+.main .first-section {
+  padding: 15px 0;
+  background-image: url("../img/cover/cover.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.main .first-section__title {
+  font-family: "EB Garamond", sans-serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 100%;
+  text-align: center;
+  max-width: 290px;
+  margin: 0 auto;
+}
+.main .first-section__title span:first-child {
+  padding-right: 225px;
+}
+.main .first-section__title span:last-child {
+  padding-left: 110px;
+}
+.main .article {
+  padding: 15px 0 30px 0;
+  line-height: 120%;
+}
+.main .article__container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.main .article__upper {
+  display: flex;
+  gap: 15px;
+}
+.main .article__time {
+  white-space: nowrap;
+}
+.main .why {
+  padding: 40px 0;
+  color: #131313;
+  background-color: #FEE42A;
+}
+.main .why__container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.main .why__paragraph {
+  font-size: 20px;
+  line-height: 1.25;
+}
+.main .why__list li {
+  padding-left: 16px;
+  position: relative;
+}
+.main .why__list li:not(:last-child) {
+  margin-bottom: 16px;
+}
+.main .why__list li::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #131313;
+}
+.main .why__list li span {
+  font-weight: 700;
+}
+.main .how {
+  margin-top: 40px;
+}
+.main .how__container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.main .how__paragraph {
+  font-size: 20px;
+  line-height: 1.25;
+}
+.main .card1 {
+  max-width: 290px;
+  border-radius: 30px;
+  /* gray-bg */
+  background: rgb(52, 52, 52);
+  padding: 20px;
+}
+.main .card1__img {
+  border-radius: 50%;
+  overflow: hidden;
+  max-width: 100px;
+  max-height: 100px;
+}
+.main .card1__img img {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main .card1__name {
+  margin-top: 8px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.main .card1__name:not(:last-child) {
+  margin-bottom: 8px;
+}
+.main .card1__description {
+  line-height: 1.25;
+}
+.main .card1__description-title {
+  margin-bottom: 8px;
+  font-family: "EB Garamond", sans-serif;
+  font-size: 22px;
+  line-height: 1.25;
+}
+.main .card2 {
+  max-width: 290px;
+  color: #131313;
+  padding: 20px;
+  border-radius: 30px;
+  background: rgb(254, 228, 42);
+}
+.main .card2__title {
+  color: rgb(19, 19, 19);
+  font-family: "EB Garamond", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 125%;
+}
+.main .card2__title:not(:last-child) {
+  margin-bottom: 8px;
+}
+.main .card2__text {
+  line-height: 1.25;
+}
+
+.footer {
+  margin-top: 60px;
+  border-top: 1px solid #FEE42A;
+}
+.footer__container {
+  min-height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+.nav-footer__list {
+  display: flex;
+  gap: 20px;
+}
+.nav-footer__link {
+  transition: all 0.3s ease 0s;
+}
+.nav-footer__link:hover {
+  text-decoration: underline;
+}
